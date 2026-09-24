@@ -52,8 +52,13 @@ def home():
     return {
         "message": "ComicCraft AI is running",
         "status": "success"
+    } 
+@app.get("/")
+def root():
+    return {
+        "status": "success",
+        "message": "ComicCraft AI is running"
     }
-
 @app.get("/health")
 def health_check():
 
