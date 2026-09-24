@@ -47,6 +47,12 @@ app.include_router(router)
 # ---------------------------------------------------------
 # ROOT HEALTH CHECK
 # ---------------------------------------------------------
+@app.get("/")
+def home():
+    return {
+        "message": "ComicCraft AI is running",
+        "status": "success"
+    }
 
 @app.get("/health")
 def health_check():
