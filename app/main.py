@@ -1,3 +1,4 @@
+```python
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -28,41 +29,44 @@ app = FastAPI(
 # STATIC FILES
 # ---------------------------------------------------------
 
-app.mount(
-    "/static",
-    StaticFiles(
-        directory=BASE_DIR / "static"
-    ),
-    name="static"
-)
+STATIC_DIR = BASE_DIR / "static"
+
+if STATIC_DIR.exists():
+    app.mount(
+        "/static",
+        StaticFiles(directory=STATIC_DIR),
+        name="static"
+    )
 
 
 # ---------------------------------------------------------
-# ROUTES
+# API ROUTES
 # ---------------------------------------------------------
 
 app.include_router(router)
 
 
 # ---------------------------------------------------------
-# ROOT HEALTH CHECK
+# ROOT ROUTE
 # ---------------------------------------------------------
-@app.get("/")
-def home():
-    return {
-        "message": "ComicCraft AI is running",
-        "status": "success"
-    } 
+
 @app.get("/")
 def root():
     return {
+        "message": "ComicCraft AI is running!",
         "status": "success",
-        "message": "ComicCraft AI is running"
+        "application": "ComicCraft"
     }
+
+
+# ---------------------------------------------------------
+# HEALTH CHECK
+# ---------------------------------------------------------
+
 @app.get("/health")
 def health_check():
-
     return {
         "status": "ok",
         "application": "ComicCraft"
     }
+```
