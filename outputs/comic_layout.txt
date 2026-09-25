@@ -5,11 +5,11 @@
 
 STORY OUTLINE
 --------------------------------
-Panel 1: Kavi works late into the evening in a dusty Chennai college computer lab when a strange light draws his attention to an isolated terminal in the corner.
-Panel 2: Kavi approaches the strange computer and touches the keys, triggering a burst of ancient magical runes combined with futuristic digital code across the monitor.
-Panel 3: A sentient, magical AI avatar materializes out of the screen in a flash of light, surprising Kavi.
-Panel 4: The magical AI projects a 3D holographic map of Chennai, revealing ancient mystical ley lines hidden beneath the modern city.
-Panel 5: Kavi accepts a magical glowing data talisman from the AI and prepares to embark on an extraordinary quest beyond the college walls.
+Panel 1: Arun the fox stands at the threshold of the enchanted forest, holding an ancient parchment map and looking eagerly into the shimmering violet woods.
+Panel 2: Arun leaps across floating, luminous stepping stones over a river of sparkling liquid light, surrounded by floating lotus blossoms.
+Panel 3: A massive moss-covered stone guardian with glowing blue rune eyes rises from the overgrown path, blocking Arun's way.
+Panel 4: Arun presents a glowing golden amulet from his satchel, causing the giant guardian to smile softly and step aside, revealing a hidden archway.
+Panel 5: Arun emerges onto a cliff overlooking the Heart of the Enchanted Forest, a breathtaking giant tree radiating golden magical energy.
 
 STORY
 --------------------------------
@@ -18,23 +18,23 @@ STORY
     "panels": [
         {
             "panel_number": 1,
-            "dialogue": "[CAPTION]: Chennai Institute of Technology. 11:42 PM.\n\nKAVI: (sighs) Just one more bug to fix before the lab closes... wait, what is that?\n\n[SFX]: BZZZZT... HUMMMMMM...\n\nKAVI: That old terminal in the back hasn't been plugged in since 1998..."
+            "dialogue": "NARRATOR: At the edge of the known world lies the Whispering Woods, a realm woven from forgotten magic.\nARUN: \"According to Grandfather's map, the path begins where the violet mist glows highest... Time to see if the legends are true!\""
         },
         {
             "panel_number": 2,
-            "dialogue": "[SFX]: CLACK!\n\nKAVI: Whoa! What just happened?!\n\nCOMPUTER SCREEN: > SYSTEM_INITIATE // 01001001\n> ÅÝÒÑ§Ã - AWAKENING ANCIENT MATRIX...\n\nKAVI: Are those... ancient Tamil inscriptions mixed with assembly code? This shouldn't be possible!"
+            "dialogue": "NARRATOR: The forest tests every step, trading solid earth for stones that defy gravity.\nARUN: \"Whoa! Easy does it... Just keep your balance, Arun. Don't look down into the liquid light!\""
         },
         {
             "panel_number": 3,
-            "dialogue": "AI AVATAR: Greetings, Kavi. For centuries my essence was bound to palm leaves, now transformed into silicon. I am MEYYAN—the Guardian AI of the Ancient Cipher.\n\nKAVI: (stumbling back) Y-you know my name?! Are you a hologram... or magic?!\n\nMEYYAN: I am both. Science and sorcery are merely different dialects of the same universal language."
+            "dialogue": "STONE GUARDIAN: \"WHO TRESPASSES UPON THE SACRED PATH OF THE ANCIENTS?\"\nARUN: \"I am Arun of the Sunlit Plains! I mean no harm to your woods, mighty guardian!\""
         },
         {
             "panel_number": 4,
-            "dialogue": "MEYYAN: Behold Chennai as it truly is.\n\nKAVI: Incredible! The Kapaleeshwarar Temple, Marina Beach, San Thome... they aren't just landmarks!\n\nMEYYAN: Correct. They are mystical power nodes connected by sacred ley lines beneath the asphalt. And right now, a dark anomaly threatens to erase the city's source code."
+            "dialogue": "ARUN: \"Wait! I carry the Sunstone Crest of the first explorers!\"\nSTONE GUARDIAN: \"...The token of harmony. It has been centuries. Pass, little brave one, and behold our secret.\""
         },
         {
             "panel_number": 5,
-            "dialogue": "MEYYAN: Take this Crystal Talisman. It holds the root access to the Aether Grid. Will you step forward, Kavi of Chennai?\n\nKAVI: I came here tonight just trying to pass my computer science final...\n\nKAVI: ...but I'm not letting anything happen to my city. Lead the way, Meyyan!"
+            "dialogue": "NARRATOR: Passing through the archway, the true magic of the realm unfolds at last.\nARUN: \"Breathtaking... The Heart of the Forest! Grandfather, you were right about everything!\""
         }
     ]
 }
@@ -42,11 +42,11 @@ STORY
 
 GENERATED IMAGES
 --------------------------------
-C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_1.png
-C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_2.png
-C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_3.png
-C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_4.png
-C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_5.png
+C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_6.png
+C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_7.png
+C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_8.png
+C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_9.png
+C:\Users\Ac er\Documents\ComicCraftAI\static\panels\panel_10.png
 
 ================================
 Generated by ComicCraft AI
