@@ -1,4 +1,3 @@
-```python
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -7,16 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from .routes import router
 
 
-# ---------------------------------------------------------
-# BASE DIRECTORY
-# ---------------------------------------------------------
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# ---------------------------------------------------------
-# FASTAPI APPLICATION
-# ---------------------------------------------------------
 
 app = FastAPI(
     title="ComicCraft - AI Comic Story Creator",
@@ -24,10 +14,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-
-# ---------------------------------------------------------
-# STATIC FILES
-# ---------------------------------------------------------
 
 STATIC_DIR = BASE_DIR / "static"
 
@@ -39,16 +25,8 @@ if STATIC_DIR.exists():
     )
 
 
-# ---------------------------------------------------------
-# API ROUTES
-# ---------------------------------------------------------
-
 app.include_router(router)
 
-
-# ---------------------------------------------------------
-# ROOT ROUTE
-# ---------------------------------------------------------
 
 @app.get("/")
 def root():
@@ -59,14 +37,9 @@ def root():
     }
 
 
-# ---------------------------------------------------------
-# HEALTH CHECK
-# ---------------------------------------------------------
-
 @app.get("/health")
 def health_check():
     return {
         "status": "ok",
         "application": "ComicCraft"
     }
-```
