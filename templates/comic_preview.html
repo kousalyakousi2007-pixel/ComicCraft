@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>ComicCraft - Comic Preview</title>
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f3f3f3;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 1000px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .panel {
+        background: white;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+
+    .panel-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #512da8;
+    }
+
+    .panel-image {
+        width: 100%;
+        max-height: 600px;
+        object-fit: contain;
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+        background: #eee;
+    }
+
+    .description {
+        margin-top: 15px;
+        font-style: italic;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .dialogue {
+        margin-top: 15px;
+        padding: 15px;
+        background: #fff3cd;
+        border-left: 5px solid #ff9800;
+        border-radius: 8px;
+        white-space: pre-line;
+        line-height: 1.6;
+    }
+
+    .caption {
+        margin-top: 12px;
+        padding: 12px;
+        background: #e3f2fd;
+        border-radius: 8px;
+        white-space: pre-line;
+    }
+
+    .narration {
+        margin-top: 12px;
+        padding: 12px;
+        background: #f3e5f5;
+        border-radius: 8px;
+        white-space: pre-line;
+    }
+
+    .buttons {
+        text-align: center;
+        margin: 35px 0;
+    }
+
+    button {
+        padding: 13px 25px;
+        margin: 8px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .home-btn {
+        background: #673ab7;
+        color: white;
+    }
+
+    .pdf-btn {
+        background: #2e7d32;
+        color: white;
+    }
+
+    button:hover {
+        opacity: 0.85;
+    }
+
+    .empty {
+        text-align: center;
+        padding: 30px;
+        color: #777;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<h1>ComicCraft AI Comic</h1>
+
+<p class="subtitle">
+    Your AI-generated comic story
+</p>
+
+
+{% if layout %}
+
+    {% for panel in layout %}
+
+    <div class="panel">
+
+        <div class="panel-title">
+            Panel {{ panel.panel_number }}:
+            {{ panel.title }}
+        </div>
+
+
+        {% if panel.image %}
+
+        <img
+            class="panel-image"
+            src="{{ panel.image }}"
+            alt="Comic Panel {{ panel.panel_number }}"
+        >
+
+        {% endif %}
+
+
+        {% if panel.scene_description %}
+
+        <div class="description">
+            {{ panel.scene_description }}
+        </div>
+
+        {% endif %}
+
+
+        {% if panel.dialogue %}
+
+        <div class="dialogue">
+
+            <strong>Dialogue</strong>
+
+            <br><br>
+
+            {{ panel.dialogue }}
+
+        </div>
+
+        {% endif %}
+
+
+        {% if panel.caption %}
+
+        <div class="caption">
+
+            <strong>Caption</strong>
+
+            <br>
+
+            {{ panel.caption }}
+
+        </div>
+
+        {% endif %}
+
+
+        {% if panel.narration %}
+
+        <div class="narration">
+
+            <strong>Narration</strong>
+
+            <br>
+
+            {{ panel.narration }}
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+    {% endfor %}
+
+
+{% else %}
+
+    <div class="empty">
+
+        <h2>No comic panels found</h2>
+
+        <p>
+            Please generate a comic first.
+        </p>
+
+    </div>
+
+{% endif %}
+
+
+<div class="buttons">
+
+    <button
+        class="home-btn"
+        onclick="window.location.href='/'"
+    >
+        Create New Comic
+    </button>
+
+
+    <button
+        class="pdf-btn"
+        onclick="exportPDF()"
+    >
+        Export PDF
+    </button>
+
+</div>
+```
+
+</div>
+
+<script>
+
+async function exportPDF() {
+
+    try {
+
+        const response = await fetch(
+            "/export/pdf",
+            {
+                method: "POST"
+            }
+        );
+
+
+        const data = await response.json();
+
+
+        if (!response.ok) {
+
+            alert(
+                data.detail ||
+                "PDF export failed."
+            );
+
+            return;
+        }
+
+
+        alert(
+            "PDF exported successfully!\n\n" +
+            data.pdf
+        );
+
+
+    } catch (error) {
+
+        alert(
+            "PDF export failed: " +
+            error.message
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
